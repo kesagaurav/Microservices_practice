@@ -1,0 +1,18 @@
+package com.gaurav.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
+
+import com.gaurav.model.Product;
+import com.gaurav.repository.ProductRepository;
+
+@Service
+public class ProductServic {
+	@Autowired
+	private ProductRepository repo;
+	
+	public Product addproduct(Product p) {
+		return repo.save(p);
+	}
+}

@@ -1,0 +1,7 @@
+package com.gaurav.dto;
+
+public class CompanyDto {
+	private String cName;
+	private String location;
+	private double salary;
+}

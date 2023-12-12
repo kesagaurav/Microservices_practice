@@ -1,0 +1,37 @@
+package com.gaurav.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter @Setter
+@ToString
+public class Address {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int aid;
+	@NotNull(message = "{address.state.absent}")
+	@Pattern(regexp = "[a-z]{1,}",message = "state should contain only alphabets")
+	private String state;
+	@NotNull(message = "plz provide an valid city")
+	@Pattern(regexp = "[a-z]{1,}",message = "city should contain only alphabets")
+	private String city;
+	@NotNull(message = "plz provide an valid  pincode")
+	@Pattern(regexp = "[a-z]{6}",message = "pincode should contain only 6 numbers")
+	private int pincode;
+	@NotNull(message = "plz provide an valid country")
+	@Pattern(regexp = "[a-z]{1,}",message = "country should contain only alphabets")
+	private String country;
+}

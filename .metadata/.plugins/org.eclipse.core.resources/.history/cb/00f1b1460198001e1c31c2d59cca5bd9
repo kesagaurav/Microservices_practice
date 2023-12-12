@@ -1,0 +1,6 @@
+
+server.application.name=GauravResponseEntity
+
+server.port=9082
+
+server.error.whitelabel.enabled=false

@@ -1,0 +1,8 @@
+package com.gaurav.service;
+
+import com.gaurav.dto.AddressDto;
+
+public interface AddressService {
+
+	AddressDto createAddress(AddressDto dto);
+}

@@ -1,0 +1,19 @@
+package com.gaurav;
+
+import java.time.LocalDate;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+
+@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+
+public class GauravMicroserviceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GauravMicroserviceApplication.class, args);
+		LocalDate localDate = LocalDate.now();
+		System.out.println("date is " + localDate);
+	}
+
+}

@@ -1,0 +1,68 @@
+package com.gaurav.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gaurav.dto.EmployeeDto;
+import com.gaurav.model.Employee;
+import com.gaurav.repository.EmployeeRepository;
+import com.gaurav.service.EmployeeService;
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	//Logger logger=(Logger) LoggerFactory.logger(this.getClass());
+	@Autowired
+	private EmployeeRepository repo;
+	@Override
+	public EmployeeDto createEmployee(EmployeeDto edto) {
+		// TODO Auto-generated method stub
+		
+//		Employee e=edto.employee(edto);
+//		Address add=new Address();
+//		e.setAddress(add);
+//		List<Company> list=new ArrayList<>();
+//		e.setCompanyList(list);
+//		edto.
+//		
+//		return repo.save(e);
+		return null;
+	}
+
+	@Override
+	public EmployeeDto getById(EmployeeDto edto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<EmployeeDto> getAllEmployees() {
+		List<EmployeeDto> edto=new ArrayList<>();
+		EmployeeDto edto1=new EmployeeDto();
+		Employee e=new Employee();
+		edto1.value(e);
+		edto.add(edto1);
+		
+	
+	
+	return  null;
+	
+	
+	
+	
+
+	}
+}

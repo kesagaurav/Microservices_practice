@@ -1,0 +1,4 @@
+
+server.application.name=GauravResponseEntity
+
+server.port=9082

@@ -1,0 +1,22 @@
+package com.gaurav.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import com.gaurav.dto.AddressDto;
+import com.gaurav.model.Address;
+import com.gaurav.service.AddressService;
+
+public class AddressController {
+	@Autowired
+	public AddressService service;
+
+	public ResponseEntity<Address> createAddress(AddressDto dto){
+		if(dto!=null) {
+			return new ResponseEntity<Address>(service.createAddress(dto), HttpStatus.CREATED);
+		}else {
+			return new ResponseEntity<Address>(service.createAddress(dto), HttpStatus.BAD_REQUEST);
+		}
+	}
+}

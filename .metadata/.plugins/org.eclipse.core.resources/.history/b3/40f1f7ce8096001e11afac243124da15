@@ -1,0 +1,10 @@
+package com.gaurav.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.gaurav.service.ProductServic;
+
+@RestController
+public class ProductController{
+
+}

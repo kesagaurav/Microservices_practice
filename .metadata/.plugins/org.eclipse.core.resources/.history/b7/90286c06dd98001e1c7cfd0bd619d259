@@ -1,0 +1,5 @@
+package com.gaurav.exception;
+
+public class AddressNotFoundException {
+
+}

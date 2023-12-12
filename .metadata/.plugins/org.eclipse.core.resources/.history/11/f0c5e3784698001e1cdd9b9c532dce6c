@@ -1,0 +1,13 @@
+package com.gaurav.service;
+
+import com.gaurav.dto.EmployeeDto;
+
+import java.util.*;
+public interface EmployeeService {
+
+	public EmployeeDto createEmployee(EmployeeDto edto);
+	public EmployeeDto getById(EmployeeDto edto);
+	public void update();
+	public void delete();
+	public List<EmployeeDto> getAllEmployees();
+}

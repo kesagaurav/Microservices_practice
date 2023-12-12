@@ -1,0 +1,25 @@
+package com.gaurav.dto;
+
+import com.gaurav.model.Address;
+
+import lombok.Data;
+
+@Data
+public class AddressDto {
+	private String state;
+	private String city;
+	private int pincode;
+	private String country;
+	
+	//converts entity into DTO
+	public static AddressDto valueOf(Address address) {
+		address=new Address();
+		AddressDto aDto=new AddressDto();
+		aDto.setCity(address.getCity());
+		aDto.setState(address.getState());
+		aDto.setPincode(address.getPincode());
+		aDto.setCountry(address.getCountry());
+		return aDto;
+		
+	}
+}

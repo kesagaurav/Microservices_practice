@@ -1,0 +1,12 @@
+server.port=9080
+spring.application.name=GauravMicroservice
+
+spring.datasouce.url=jdbc:postgresql://localhost:5432/gaurav
+
+spring.datasource.name=postgres
+spring.datasource.password=postgres
+
+spring.jpa.generate-ddl=true
+#spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect

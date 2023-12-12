@@ -1,0 +1,13 @@
+package com.gaurav.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GauravController {
+
+	public ResponseEntity<String> getName(){
+		return new ResponseEntity<String>("hello welcome to the gaurav spring-microservice tutorial", HttpStatus.ACCEPTED);
+	}
+}

@@ -1,0 +1,38 @@
+package com.gaurav.dto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.gaurav.model.Address;
+import com.gaurav.model.Company;
+import com.gaurav.model.Employee;
+
+import lombok.Data;
+@Data
+public class EmployeeDto {
+	private String name;
+	private String desc;
+	private int empId;
+	private char gender;
+
+	public AddressDto address;
+
+	public List<Integer> companyList;
+	
+	
+	public static EmployeeDto value(Employee e) {
+		EmployeeDto edto=new EmployeeDto();
+		edto.setName(edto.getName());
+		edto.setDesc(e.getDesc());
+		edto.setGender(e.getGender());
+		AddressDto adto=AddressDto.valueOf(e.getAddress());
+		List<Company> c=e.getCompanyList();
+		List<Integer> list=new ArrayList<>();
+		for(Company c1:c) {
+			list.add(c1.getCid());
+		}
+		return edto;
+	}
+	
+	
+}

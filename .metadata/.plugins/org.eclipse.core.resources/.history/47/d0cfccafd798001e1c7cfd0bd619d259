@@ -1,0 +1,46 @@
+package com.gaurav.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gaurav.dto.AddressDto;
+import com.gaurav.dto.EmployeeDto;
+import com.gaurav.model.Address;
+import com.gaurav.repository.AddressRepository;
+import com.gaurav.service.AddressService;
+@Service
+public class AddressServiceImpl implements AddressService{
+	@Autowired
+	private AddressRepository repo;
+
+	@Override
+	public Address createAddress(AddressDto dto) {
+		// TODO Auto-generated method stub
+		Address a=new Address();
+		AddressDto valueOf2 = dto.valueOf(a);
+		Address valueOf = dto.value1(dto);
+		return repo.save(valueOf);
+	}
+
+	@Override
+	public Address getById(AddressDto dto) {
+		// TODO Auto-generated method stub
+		Address a=repo.findById(dto.getAid()).get();
+		Address dto1=dto.value1(dto);
+		return a;
+	}
+
+	@Override
+	public List<Address> getAllAddress(List<AddressDto> dto) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		return dto.stream().map(a->a.value1(a)).collect(Collectors.toList());
+	}
+
+}
